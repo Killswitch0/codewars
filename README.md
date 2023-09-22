@@ -43,3 +43,15 @@ The site has its own [skill gradation](https://www.codewars.com/about)
 | 2 kyu     | 404           |
 | 1 kyu     | 1,097         |
 
+#### To give you a general idea about the process, here are the approximate percents you may gain when comparing your rank with the rank of the Kata you completed:
+
+| Kata rank - Your rank | Percentage Gain |
+| ---------------------- | --------------- |
+| +2                     | +30%            |
+| +1                     | +12%            |
+| 0                      | +5%             |
+| -1                     | +1.7%           |
+| -2                     | +0.3%           |
+| -3                     | +0.09%          |
+
+
