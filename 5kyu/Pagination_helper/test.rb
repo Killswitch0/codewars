@@ -3,9 +3,9 @@ require 'rspec'
 require_relative 'pagination_helper'
 
 describe "Example" do
-  it "should return the sum" do
-    helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
+  helper = PaginationHelper.new(['a','b','c','d','e','f'], 4)
 
+  it "should return the sum" do
     expect(helper.item_count).to eq(6)
     expect(helper.page_count).to eq(2)
     expect(helper.page_item_count(0)).to eq(4)

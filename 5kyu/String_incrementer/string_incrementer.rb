@@ -18,7 +18,6 @@
 #
 # Attention: If the number has leading zeros the amount of digits should be considered.
 
-# TODO
 def increment_string(input)
   ints = input.delete('^0-9')
 
