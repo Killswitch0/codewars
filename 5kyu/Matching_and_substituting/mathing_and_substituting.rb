@@ -43,36 +43,36 @@
 #   You can see other examples in the "Sample tests".
 
 def change(s, pg, v)
-    new_lines = s.split("\n").map do |str|
-      category, value = str.split(':').map(&:strip)
+  new_lines = s.split("\n").map do |str|
+    category, value = str.split(':').map(&:strip)
       
-      case category
-      when 'Program title'
-        "#{category.split[0]}: #{pg}"
-      when 'Author'
-        "#{category}: g964"
-      when 'Phone'
-        if !value.match(/\+1-\d{3}-\d{3}-\d{4}$/)
-          return "ERROR: VERSION or PHONE"
-        else
-          "#{category}: +1-503-555-0090"
-        end
-      when 'Date'
-        "#{category}: 2019-01-01"
-      when 'Version'
-        if !value.match(/^\d+\.\d+$/)
-          return "ERROR: VERSION or PHONE"
-        else
-          version = value == '2.0' ? '2.0' : v        
-          "#{category}: #{version}"  
-        end
+    case category
+    when 'Program title'
+      "#{category.split[0]}: #{pg}"
+    when 'Author'
+      "#{category}: g964"
+    when 'Phone'
+      if !value.match(/\+1-\d{3}-\d{3}-\d{4}$/)
+        return "ERROR: VERSION or PHONE"
       else
-        next
-      end 
-    end
-    
-    new_lines.compact.join(' ')
+        "#{category}: +1-503-555-0090"
+      end
+    when 'Date'
+      "#{category}: 2019-01-01"
+    when 'Version'
+      if !value.match(/^\d+\.\d+$/)
+        return "ERROR: VERSION or PHONE"
+      else
+        version = value == '2.0' ? '2.0' : v        
+        "#{category}: #{version}"  
+      end
+    else
+      next
+    end 
   end
+    
+  new_lines.compact.join(' ')
+end
 
 s1="Program title: Primes\nAuthor: Kern\nCorporation: Gold\nPhone: +1-503-555-0091\nDate: Tues April 9, 2005\nVersion: 6.7\nLevel: Alpha"
 s2="Program title: Balance\nAuthor: Dorries\nCorporation: Funny\nPhone: +1-503-555-0095\nDate: Tues July 19, 2014\nVersion: 6.7\nLevel: Release"

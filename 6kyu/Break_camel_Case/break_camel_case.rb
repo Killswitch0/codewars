@@ -6,20 +6,20 @@
 #   ""             =>  ""
 
 def solution(string)
-    result = []
+  result = []
     
-    string.chars.each_with_index do |l, i|
-      next_let = string[i + 1]  
-      result << l
+  string.chars.each_with_index do |l, i|
+    next_let = string[i + 1]  
+    result << l
 
-      break if next_let.nil?
+    break if next_let.nil?
 
-      result << ' ' if l == l.downcase && 
+    result << ' ' if l == l.downcase && 
                         next_let == next_let.upcase
-    end
-    
-    result.join
   end
+    
+  result.join
+end
 
 p solution('camelCasing')   # 'camel Casing')
 p solution('camelCasingTest') # 'camel Casing Test')

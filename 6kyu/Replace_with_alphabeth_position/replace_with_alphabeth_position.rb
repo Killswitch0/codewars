@@ -12,13 +12,13 @@
 #   Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
 
 def alphabet_position(text)
-    alphabeth = ('a'..'z').to_a
+  alphabeth = ('a'..'z').to_a
     
-    text
-    .downcase
-    .scan(/[a-z]/)
-    .map { |char| alphabeth.index(char) + 1 }
-    .join(' ')
+  text
+  .downcase
+  .scan(/[a-z]/)
+  .map { |char| alphabeth.index(char) + 1 }
+  .join(' ')
 end
 
 p alphabet_position("The sunset sets at twelve o' clock.") # => "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"

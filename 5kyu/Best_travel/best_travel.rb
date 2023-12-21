@@ -1,7 +1,7 @@
 # https://www.codewars.com/kata/55e7280b40e1c4a06d0000aa
 
 def choose_best_sum(t, k, ls)
-    ls.combination(k).to_a.map(&:sum).select { |n| n <= t }.max
+  ls.combination(k).to_a.map(&:sum).select { |n| n <= t }.max
 end
 
 ts = [50, 55, 56, 57, 58]
