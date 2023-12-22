@@ -24,3 +24,8 @@ def decipher_this(string)
     w
   end.join(" ")
 end
+
+
+p decipher_this('72olle 103doo 100ya') # => 'Hello good day'
+p decipher_this('82yade 115te 103o') # => 'Ready set go'
+
