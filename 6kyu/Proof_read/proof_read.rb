@@ -1,3 +1,5 @@
+# https://www.codewars.com/kata/583710f6b468c07ba1000017
+
 # You've just finished writing the last chapter for your novel when a virus suddenly infects your document. 
 # It has swapped the 'i's and 'e's in 'ei' words and capitalised random letters. Write a function which will:
 
