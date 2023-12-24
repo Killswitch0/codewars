@@ -27,7 +27,7 @@
 require_relative 'words'
 
 def longest_word(letters)
-  matched_words = $words.select do |word|
+  matched_words = $WORDS.select do |word|
     word.chars.uniq.all? { |char| letters.to_s.count(char) >= word.count(char) }
   end
   
@@ -43,6 +43,6 @@ p longest_word('GQEMAUVXY') # => ['GAME']
 p longest_word('EAEEAYITB') # => ['BEAT', 'BITE', 'BYTE']
 p longest_word('AKUIYOOLO') # => ['LOOK', 'YOLK']
 p longest_word('GVDTCAESU') # => ['CAGES', 'CAUSE', 'CAVES', 'DATES', 'GATES', 'GUEST', 'STAGE', 'USAGE']
-p longest_word("")            # => nil
-p longest_word("MKMKMKMKM")   # => nil
-p longest_word("IIIWUGEZI")   # => nil
+p longest_word("")          # => nil
+p longest_word("MKMKMKMKM") # => nil
+p longest_word("IIIWUGEZI") # => nil
